@@ -9,7 +9,7 @@ This is asp.net mvc application which consist of the following:
 
 - Use powerful jQuery plug-ins
 
-- Implement authentication and authorization using ASP.NET Web API
+- Implement security, authentication and authorization using ASP.NET Identity
 
 - Using Entity Framework to query or update data
 
