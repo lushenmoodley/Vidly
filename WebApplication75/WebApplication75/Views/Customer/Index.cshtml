@@ -1,0 +1,27 @@
+﻿@model WebApplication75.ViewModel.CustomerViewModel
+
+@if (Model.GetCustomers.Count == 0)
+{
+    <p>No Customer has rented this movie</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Discount Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model.GetCustomers)
+            {
+                <tr>
+                    <td>@Html.ActionLink(customer.CustomerName, "Detail", new { id = customer.CustomerId })</td>
+                    <td>@customer.MembershipType.DiscountRate%</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
