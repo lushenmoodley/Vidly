@@ -1,5 +1,6 @@
 # Vidly
 This is asp.net mvc application which consist of the following:
+
 -Implement CRUD operations
 -Build forms with server-side and client-side validation
 -Build RESTful services using ASP.NET Web API
