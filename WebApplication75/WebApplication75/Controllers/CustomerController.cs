@@ -63,7 +63,7 @@ namespace WebApplication75.Controllers
                 MembershipType = membershipTypes
             };
 
-            return View(ViewModel);
+            return View("New", ViewModel);
         }
 
         [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
@@ -72,6 +72,24 @@ namespace WebApplication75.Controllers
             _context.Customers.Add(customer);
             _context.SaveChanges();
             return RedirectToAction("Index", "Customer");
+        }
+
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.CustomerId==id);
+
+            if(customer==null)
+            {
+                return HttpNotFound();
+            }
+
+            var ViewModel = new NewCustomerViewModel
+            {
+                Customer = customer,
+                MembershipType = _context.MembershipTypes.ToList()
+            };
+            return View("New",ViewModel);
         }
 
 
