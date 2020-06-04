@@ -54,9 +54,8 @@ namespace WebApplication75.Controllers
         }
 
 
-        public ActionResult New()
+        public ActionResult New()//this method populates the drop down list
         {
-
             var membershipTypes = _context.MembershipTypes.ToList();
 
             var ViewModel = new NewCustomerViewModel
@@ -66,6 +65,15 @@ namespace WebApplication75.Controllers
 
             return View(ViewModel);
         }
+
+        [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
+        public ActionResult Create(Customer customer)
+        {
+            _context.Customers.Add(customer);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Customer");
+        }
+
 
     }
 }
