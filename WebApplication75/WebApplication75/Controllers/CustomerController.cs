@@ -69,8 +69,21 @@ namespace WebApplication75.Controllers
         [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
         public ActionResult Create(Customer customer)
         {
-            _context.Customers.Add(customer);
+            if (customer.CustomerId == 0)
+            {
+                _context.Customers.Add(customer);                
+            }
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.CustomerId == customer.CustomerId);
+                customerInDb.CustomerName = customer.CustomerName;
+                customerInDb.CustomerDateOfBirth = customer.CustomerDateOfBirth;
+                customerInDb.MembershipTypeId = customerInDb.MembershipTypeId;
+                customerInDb.IsSubscribed = customer.IsSubscribed;
+            }
+
             _context.SaveChanges();
+
             return RedirectToAction("Index", "Customer");
         }
 
