@@ -1,0 +1,39 @@
+﻿@model WebApplication75.ViewModel.NewMovieModel
+@{
+    ViewBag.Title = "New";
+}
+<br />
+<h4>Adding A New Movie</h4>
+<br />
+@using (Html.BeginForm("Create", "Movie"))/*A form in html is like a container we can add various elements in it.When adding @using with the beginform method it renders ensure form has a opening tag<form> & has a closing </form> tag*/
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.MovieName)<!--We are using a lambda expression and when razor look at the .CustomerName property it will use it has a html value-->
+        @Html.TextBoxFor(m => m.Movie.MovieName, new { @class = "form-control" }) <!--Form control class is used to style a textbox-->
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.ReleaseDate)
+        @Html.TextBoxFor(m => m.Movie.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.GenreId)
+        @Html.DropDownListFor(m => m.Movie.GenreId, new SelectList(Model.GenreType, "Id", "GenreName"), "Select A Genre Type", new { @class = "form-control" })
+
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.Price)
+        @Html.TextBoxFor(m => m.Movie.Price, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.NumberInStock)
+        @Html.TextBoxFor(m => m.Movie.NumberInStock, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Movie.NumberAvaliable)
+        @Html.TextBoxFor(m => m.Movie.NumberAvaliable, new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.Movie.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
+

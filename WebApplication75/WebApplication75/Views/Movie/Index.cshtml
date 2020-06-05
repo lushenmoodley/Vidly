@@ -1,0 +1,40 @@
+﻿@model WebApplication75.ViewModel.MovieViewModel
+@{
+    ViewBag.Title = "List of Movies";
+}
+<br />
+<h4>List Of Movies</h4>
+<br />
+@if (Model.GetMovies.Count == 0)
+{
+    <p>No Movies are in stock</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Movie Name</th>
+                <th>Release Date</th>
+                <th>Genre</th>
+                <th>Price</th>
+                <th>Stock Quantity</th>
+                <th>Avaliability Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var movie in Model.GetMovies)
+            {
+                <tr>
+                    <td>@movie.MovieName</td>
+                    <td>@movie.ReleaseDate</td>
+                    <td>@movie.Genre.GenreName</td>
+                    <td>@movie.Price</td>
+                    <td>@movie.NumberInStock</td>
+                    <td>@movie.NumberAvaliable</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@Html.ActionLink("Add New Movies", "New", "Movie", new { @class = "elements" }, null)
