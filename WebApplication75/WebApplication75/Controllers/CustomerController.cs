@@ -60,6 +60,7 @@ namespace WebApplication75.Controllers
 
             var ViewModel = new NewCustomerViewModel
             {
+                Customer = new Customer(),
                 MembershipType = membershipTypes
             };
 
@@ -69,6 +70,16 @@ namespace WebApplication75.Controllers
         [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
         public ActionResult Create(Customer customer)
         {
+            if(ModelState.IsValid==false)
+            {
+                var ViewModel = new NewCustomerViewModel
+                {
+                    Customer = customer,
+                    MembershipType = _context.MembershipTypes.ToList()
+                };
+                return View("New",ViewModel);
+            }
+
             if (customer.CustomerId == 0)
             {
                 _context.Customers.Add(customer);                
