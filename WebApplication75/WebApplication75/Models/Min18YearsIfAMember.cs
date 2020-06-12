@@ -18,7 +18,7 @@ namespace WebApplication75.Models
                 return new ValidationResult("Birthdate is required");
             }
 
-            var age = DateTime.Today.Year - customer.CustomerDateOfBirth.Year;       
+            var age = DateTime.Today.Year - Convert.ToInt16(customer.CustomerDateOfBirth);       
 
             if(age<18)
             {

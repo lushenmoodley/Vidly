@@ -13,10 +13,10 @@ namespace WebApplication75.Models
         [StringLength(255)]
         [Display(Name = "Customer Name")]
         public string CustomerName { get; set; }
-        
-        [Display(Name="Date Of Birth")]
+
+        [Display(Name = "Date Of Birth")]
         [Min18YearsIfAMember]
-        public DateTime CustomerDateOfBirth { get; set; }
+        public Nullable<DateTime> CustomerDateOfBirth { get; set; } 
 
         public bool IsSubscribed { get; set; }
         public MembershipType MembershipType { get; set; }

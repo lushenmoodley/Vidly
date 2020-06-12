@@ -68,6 +68,7 @@ namespace WebApplication75.Controllers
         }
 
         [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Customer customer)
         {
             if(ModelState.IsValid==false)
