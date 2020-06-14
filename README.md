@@ -7,7 +7,9 @@ This is asp.net mvc application which consist of the following:
 
 - Build RESTful services using ASP.NET Web API
 
-- Use powerful jQuery plug-ins
+- Use powerful jQuery plug-ins(Datatables)
+
+- Implement bootbox
 
 - Implement security, authentication and authorization using ASP.NET Identity
 
