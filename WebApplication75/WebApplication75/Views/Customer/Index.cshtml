@@ -9,13 +9,14 @@
 }
 else
 {
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover" id="customertbl">
         <thead>
             <tr>
                 <th>Customer</th>
                 <th>Discount Rate</th>
                 <th>Valid Subscription</th>
                 <th>Membership Type</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -35,6 +36,7 @@ else
                         }
                     </td>
                     <td>@customer.MembershipType.Name</td>
+                    <td><button data-customer-id="@customer.CustomerId" class="btn-link js-delete">Delete</button></td><!---the class called btn-link makes a button look like a link-->
                 </tr>
             }
 
@@ -42,3 +44,29 @@ else
     </table>
 }
 @Html.ActionLink("Add New Customer", "New", "Customer", new { @class = "elements" }, null)
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            $("#customertbl").dataTable();
+
+            $("#customertbl .js-delete").on("click", function () {
+                var button = $(this);
+                bootbox.confirm("Are you sure you want to delete this customer", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/customers/" + button.attr("data-customer-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parent("tr").remove();
+                                location.reload(true);
+                            }
+                        });
+                    }
+                });
+                              
+            });
+        });
+    </script>
+}

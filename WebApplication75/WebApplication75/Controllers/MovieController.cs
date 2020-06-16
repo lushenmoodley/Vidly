@@ -41,6 +41,7 @@ namespace WebApplication75.Controllers
 
             var ViewModel = new NewMovieModel
             {
+                Movie = new Movies(),
                 GenreType = GenreTypes
             };
           
@@ -50,6 +51,16 @@ namespace WebApplication75.Controllers
         [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
         public ActionResult Create(Movies movie)
         {
+            if (ModelState.IsValid == false)
+            {
+                var ViewModel = new NewMovieModel
+                {
+                    Movie = movie,
+                    GenreType = _context.Genres.ToList(),
+                };
+                return View("New", ViewModel);
+            }
+
             if (movie.Id == 0)
             {
                 _context.Movies.Add(movie);

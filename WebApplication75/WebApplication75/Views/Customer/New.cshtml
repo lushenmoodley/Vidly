@@ -2,35 +2,39 @@
 @{
     ViewBag.Title = "New";
 }
-
+<br />
 <h4>Adding A New Customer</h4>
-
+<br />
 @using (Html.BeginForm("Create", "Customer"))/*A form in html is like a container we can add various elements in it.When adding @using with the beginform method it renders ensure form has a opening tag<form> & has a closing </form> tag*/
 {
-    @Html.ValidationSummary(true,"Please fix the following errors")
+    @Html.ValidationSummary(true, "Please fix the following errors")
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.CustomerName)<!--We are using a lambda expression and when razor look at the .CustomerName property it will use it has a html value-->
         @Html.TextBoxFor(m => m.Customer.CustomerName, new { @class = "form-control" }) <!--Form control class is used to style a textbox-->
-        @Html.ValidationMessageFor(m=>m.Customer.CustomerName)
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Customer.CustomerDateOfBirth)
-        @Html.TextBoxFor(m => m.Customer.CustomerDateOfBirth, "{0:d MMM yyyy}", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Customer.CustomerDateOfBirth)
+        @Html.ValidationMessageFor(m => m.Customer.CustomerName)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.MembershipTypeId)
         @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipType, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
     </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.CustomerDateOfBirth)
+        @Html.TextBoxFor(m => m.Customer.CustomerDateOfBirth, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.CustomerDateOfBirth)
+    </div>
     <div class="checkbox">
         <label>
             @Html.CheckBoxFor(m => m.Customer.IsSubscribed) Subscribed to Newsletter?
         </label>
     </div>
-    @Html.HiddenFor(m=>m.Customer.CustomerId)
+    @Html.HiddenFor(m => m.Customer.CustomerId)
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
 }
-
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")    
+}
 
 

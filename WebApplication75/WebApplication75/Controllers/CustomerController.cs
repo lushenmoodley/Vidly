@@ -68,6 +68,7 @@ namespace WebApplication75.Controllers
         }
 
         [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Customer customer)
         {
             if(ModelState.IsValid==false)
@@ -89,7 +90,7 @@ namespace WebApplication75.Controllers
                 var customerInDb = _context.Customers.Single(c => c.CustomerId == customer.CustomerId);
                 customerInDb.CustomerName = customer.CustomerName;
                 customerInDb.CustomerDateOfBirth = customer.CustomerDateOfBirth;
-                customerInDb.MembershipTypeId = customerInDb.MembershipTypeId;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
                 customerInDb.IsSubscribed = customer.IsSubscribed;
             }
 
