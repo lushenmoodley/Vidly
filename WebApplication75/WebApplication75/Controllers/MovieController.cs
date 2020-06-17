@@ -25,16 +25,21 @@ namespace WebApplication75.Controllers
         // GET: Movie
         public ActionResult Index()
         {
-            var Movie = _context.Movies.Include(c=>c.Genre).ToList();
+            var Movie = _context.Movies.Include(c => c.Genre).ToList();
 
             var ViewModel = new MovieViewModel
             {
                 GetMovies = Movie.ToList()
             };
+            if (User.IsInRole("CanManageMovies"))
 
-            return View(ViewModel);
+                return View("Index",ViewModel);
+            else
+
+                return View("ReadOnlyList",ViewModel);
         }
 
+        [Authorize(Roles ="CanManageMovies")]
         public ActionResult New()
         {
             var GenreTypes = _context.Genres.ToList();
@@ -48,6 +53,7 @@ namespace WebApplication75.Controllers
             return View("New", ViewModel);
         }
 
+        [Authorize(Roles = "CanManageMovies")]
         [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
         public ActionResult Create(Movies movie)
         {

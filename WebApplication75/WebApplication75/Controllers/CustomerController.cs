@@ -8,6 +8,7 @@ using WebApplication75.ViewModel;
 using System.Data.Entity;
 namespace WebApplication75.Controllers
 {
+ 
     public class CustomerController : Controller
     {
 
@@ -26,6 +27,7 @@ namespace WebApplication75.Controllers
         }
         
         // GET: Customer
+        
         public ActionResult Index()
         {
             //this is an example of eager loading,the include method is used to pass the target property 
@@ -37,7 +39,13 @@ namespace WebApplication75.Controllers
                 GetCustomers = customer.ToList()
             };
 
-            return View(ViewModel);
+            if (User.IsInRole("CanManageMovies"))
+
+                return View("Index", ViewModel);
+            else
+
+                return View("ReadOnlyList", ViewModel);
+
         }
 
         public ActionResult Detail(int id)
@@ -53,7 +61,7 @@ namespace WebApplication75.Controllers
             return View(customer);
         }
 
-
+        [Authorize(Roles = "CanManageMovies")]
         public ActionResult New()//this method populates the drop down list
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -69,6 +77,7 @@ namespace WebApplication75.Controllers
 
         [HttpPost]/*this ensure the method is only called using httpPost not httpGet*/
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "CanManageMovies")]
         public ActionResult Create(Customer customer)
         {
             if(ModelState.IsValid==false)

@@ -1,0 +1,54 @@
+﻿@model WebApplication75.ViewModel.CustomerViewModel
+<br />
+<h4>List Of Registered Customers</h4>
+<br/>
+
+@if (Model.GetCustomers.Count == 0)
+{
+    <p>No Customer has rented this movie</p>
+}
+else
+{
+    <table class="table table-bordered table-hover" id="customertbl">
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Discount Rate</th>
+                <th>Valid Subscription</th>
+                <th>Membership Type</th>                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model.GetCustomers)
+            {
+                <tr>
+                    <td>@customer.CustomerName</td>
+                    <td>@customer.MembershipType.DiscountRate%</td>
+                    <td>
+                        @if (customer.IsSubscribed == true)
+                        {
+                            <span>Valid Subscriber</span>
+                        }
+                        else
+                        {
+                            <span>Not A Subscriber</span>
+                        }
+                    </td>
+                    <td>@customer.MembershipType.Name</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+}
+@Html.ActionLink("Add New Customer", "New", "Customer", new { @class = "elements" }, null)
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+
+            $("#customertbl").dataTable();
+                              
+            });       
+    </script>
+}

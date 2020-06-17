@@ -7,7 +7,8 @@ namespace WebApplication75
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new AuthorizeAttribute());
+            filters.Add(new HandleErrorAttribute());//this redirects a user to an error page when an action throws an error
         }
     }
 }

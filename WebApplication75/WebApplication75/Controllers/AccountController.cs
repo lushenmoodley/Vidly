@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WebApplication75.Models;
@@ -151,10 +152,20 @@ namespace WebApplication75.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email,DrivingLicense=model.DrivingLicense };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    //Temp Code--this code was to assign any new users to the store manager role,once the code is implemented to run the application and register a new user.When register a new user you are automatically assigning them to the storemanagerRole
+                  /*  var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());//this is a genetic class(Role Store),we have to specify a class <>since we have no custom  class we are using the default identityrole class
+                    var roleManager = new RoleManager<IdentityRole>(roleStore);
+                    await roleManager.CreateAsync(new IdentityRole("CanManageMovies"));//this line creates a new role
+                    //The movie manager role is suppose to be passed here but you can use keywords which will provide a description of the roles
+                    //Best Practice is to name these roles after the actual permissions
+                    //Has the application grow we are not going to remeber what permissions these roles have
+                    await UserManager.AddToRoleAsync(user.Id, "CanManageMovies");
+                    */
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
