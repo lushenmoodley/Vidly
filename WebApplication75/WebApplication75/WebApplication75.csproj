@@ -209,8 +209,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\MoviesController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
@@ -218,65 +219,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005241402145_customerClass.cs" />
-    <Compile Include="Migrations\202005241402145_customerClass.Designer.cs">
-      <DependentUpon>202005241402145_customerClass.cs</DependentUpon>
+    <Compile Include="Migrations\202006170956317_MigrationAddedSuccesfully.cs" />
+    <Compile Include="Migrations\202006170956317_MigrationAddedSuccesfully.Designer.cs">
+      <DependentUpon>202006170956317_MigrationAddedSuccesfully.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005241402585_addCustomerDBSet.cs" />
-    <Compile Include="Migrations\202005241402585_addCustomerDBSet.Designer.cs">
-      <DependentUpon>202005241402585_addCustomerDBSet.cs</DependentUpon>
+    <Compile Include="Migrations\202006171012060_seedAllUsers.cs" />
+    <Compile Include="Migrations\202006171012060_seedAllUsers.Designer.cs">
+      <DependentUpon>202006171012060_seedAllUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005241657157_populateMembershipTable.cs" />
-    <Compile Include="Migrations\202005241657157_populateMembershipTable.Designer.cs">
-      <DependentUpon>202005241657157_populateMembershipTable.cs</DependentUpon>
+    <Compile Include="Migrations\202006171019477_seedRole.cs" />
+    <Compile Include="Migrations\202006171019477_seedRole.Designer.cs">
+      <DependentUpon>202006171019477_seedRole.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005241841001_AddNewColumnToCustomerTable.cs" />
-    <Compile Include="Migrations\202005241841001_AddNewColumnToCustomerTable.Designer.cs">
-      <DependentUpon>202005241841001_AddNewColumnToCustomerTable.cs</DependentUpon>
+    <Compile Include="Migrations\202006171020252_seedUserAgain.cs" />
+    <Compile Include="Migrations\202006171020252_seedUserAgain.Designer.cs">
+      <DependentUpon>202006171020252_seedUserAgain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202005251829507_updateCustomerTable.cs" />
-    <Compile Include="Migrations\202005251829507_updateCustomerTable.Designer.cs">
-      <DependentUpon>202005251829507_updateCustomerTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005261850464_updateMembershipTypeModel.cs" />
-    <Compile Include="Migrations\202005261850464_updateMembershipTypeModel.Designer.cs">
-      <DependentUpon>202005261850464_updateMembershipTypeModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202005261854329_updateMembershipTypeModel1.cs" />
-    <Compile Include="Migrations\202005261854329_updateMembershipTypeModel1.Designer.cs">
-      <DependentUpon>202005261854329_updateMembershipTypeModel1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006041830427_MovieModel.cs" />
-    <Compile Include="Migrations\202006041830427_MovieModel.Designer.cs">
-      <DependentUpon>202006041830427_MovieModel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006041834417_IdentityModelsUpdated.cs" />
-    <Compile Include="Migrations\202006041834417_IdentityModelsUpdated.Designer.cs">
-      <DependentUpon>202006041834417_IdentityModelsUpdated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006041836540_populateTheMovieTable.cs" />
-    <Compile Include="Migrations\202006041836540_populateTheMovieTable.Designer.cs">
-      <DependentUpon>202006041836540_populateTheMovieTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006041910333_movieModelUpdated.cs" />
-    <Compile Include="Migrations\202006041910333_movieModelUpdated.Designer.cs">
-      <DependentUpon>202006041910333_movieModelUpdated.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006051809573_createGenreTable.cs" />
-    <Compile Include="Migrations\202006051809573_createGenreTable.Designer.cs">
-      <DependentUpon>202006051809573_createGenreTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006051811112_GenreTableAdded.cs" />
-    <Compile Include="Migrations\202006051811112_GenreTableAdded.Designer.cs">
-      <DependentUpon>202006051811112_GenreTableAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006051830338_movietable.cs" />
-    <Compile Include="Migrations\202006051830338_movietable.Designer.cs">
-      <DependentUpon>202006051830338_movietable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202006051835068_populateGenreTable.cs" />
-    <Compile Include="Migrations\202006051835068_populateGenreTable.Designer.cs">
-      <DependentUpon>202006051835068_populateGenreTable.cs</DependentUpon>
+    <Compile Include="Migrations\202006171343530_drivingLicense.cs" />
+    <Compile Include="Migrations\202006171343530_drivingLicense.Designer.cs">
+      <DependentUpon>202006171343530_drivingLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -533,6 +494,8 @@
     <Content Include="Views\Customer\New.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Movie\New.cshtml" />
+    <Content Include="Views\Customer\ReadOnlyList.cshtml" />
+    <Content Include="Views\Movie\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -551,50 +514,20 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202005241402145_customerClass.resx">
-      <DependentUpon>202005241402145_customerClass.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006170956317_MigrationAddedSuccesfully.resx">
+      <DependentUpon>202006170956317_MigrationAddedSuccesfully.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005241402585_addCustomerDBSet.resx">
-      <DependentUpon>202005241402585_addCustomerDBSet.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006171012060_seedAllUsers.resx">
+      <DependentUpon>202006171012060_seedAllUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005241657157_populateMembershipTable.resx">
-      <DependentUpon>202005241657157_populateMembershipTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006171019477_seedRole.resx">
+      <DependentUpon>202006171019477_seedRole.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005241841001_AddNewColumnToCustomerTable.resx">
-      <DependentUpon>202005241841001_AddNewColumnToCustomerTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006171020252_seedUserAgain.resx">
+      <DependentUpon>202006171020252_seedUserAgain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005251829507_updateCustomerTable.resx">
-      <DependentUpon>202005251829507_updateCustomerTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005261850464_updateMembershipTypeModel.resx">
-      <DependentUpon>202005261850464_updateMembershipTypeModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005261854329_updateMembershipTypeModel1.resx">
-      <DependentUpon>202005261854329_updateMembershipTypeModel1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006041830427_MovieModel.resx">
-      <DependentUpon>202006041830427_MovieModel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006041834417_IdentityModelsUpdated.resx">
-      <DependentUpon>202006041834417_IdentityModelsUpdated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006041836540_populateTheMovieTable.resx">
-      <DependentUpon>202006041836540_populateTheMovieTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006041910333_movieModelUpdated.resx">
-      <DependentUpon>202006041910333_movieModelUpdated.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006051809573_createGenreTable.resx">
-      <DependentUpon>202006051809573_createGenreTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006051811112_GenreTableAdded.resx">
-      <DependentUpon>202006051811112_GenreTableAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006051830338_movietable.resx">
-      <DependentUpon>202006051830338_movietable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202006051835068_populateGenreTable.resx">
-      <DependentUpon>202006051835068_populateGenreTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202006171343530_drivingLicense.resx">
+      <DependentUpon>202006171343530_drivingLicense.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

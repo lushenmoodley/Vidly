@@ -508,22 +508,6 @@ C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\bin\Microsoft.
 C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\bin\Microsoft.AI.Web.xml
 C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.customerClass.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.addCustomerDBSet.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.populateMembershipTable.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.AddNewColumnToCustomerTable.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.updateCustomerTable.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.updateMembershipTypeModel.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.updateMembershipTypeModel1.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.MovieModel.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.IdentityModelsUpdated.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.populateTheMovieTable.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.movieModelUpdated.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.createGenreTable.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.GenreTableAdded.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.movietable.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.populateGenreTable.resources
-C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.csproj.GenerateResource.cache
 C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.csproj.CoreCompileInputs.cache
 C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.csproj.CopyComplete
 C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.dll
@@ -823,3 +807,9 @@ C:\Users\lushe\OneDrive\Desktop\MVC Tutorial\7.Client Side Development\77.Databa
 C:\Users\lushe\OneDrive\Desktop\MVC Tutorial\7.Client Side Development\77.Database Plugin\WebApplication75\WebApplication75\obj\Debug\WebApplication75.csproj.CopyComplete
 C:\Users\lushe\OneDrive\Desktop\MVC Tutorial\7.Client Side Development\77.Database Plugin\WebApplication75\WebApplication75\obj\Debug\WebApplication75.dll
 C:\Users\lushe\OneDrive\Desktop\MVC Tutorial\7.Client Side Development\77.Database Plugin\WebApplication75\WebApplication75\obj\Debug\WebApplication75.pdb
+C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.MigrationAddedSuccesfully.resources
+C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.csproj.GenerateResource.cache
+C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.seedAllUsers.resources
+C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.seedRole.resources
+C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.seedUserAgain.resources
+C:\Users\lushe\OneDrive\Desktop\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.drivingLicense.resources
