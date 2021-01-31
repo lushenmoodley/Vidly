@@ -26,7 +26,7 @@ namespace WebApplication75
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-lumen.css",
                       "~/Content/DataTables/css/dataTables.bootstrap.css",//this stylesheet make datatables look like bootstrap tables
                       "~/Content/site.css"));
         }
