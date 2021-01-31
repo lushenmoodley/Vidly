@@ -73,7 +73,7 @@ namespace WebApplication75.Controllers
             }
             else
             {
-                var movieInDb = _context.Movies.Single(m => m.Id == m.Id);
+                var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
                 movieInDb.MovieName = movie.MovieName;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
                 movieInDb.Genre = movie.Genre;
