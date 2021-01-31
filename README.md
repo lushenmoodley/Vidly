@@ -17,7 +17,6 @@ This is asp.net mvc application which consist of the following:
 
 - Using Entity Framework code-first workflow to build models 
 
-Login Details:
 Admin Account:
 Username:admin@vidly.com
 Password:Support49!
