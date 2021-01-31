@@ -1,3 +1,0 @@
-Admin Account: Username:admin@vidly.com Password:Support49!
-
-Guest Account: Username:guest@vidly.com Password:Support49!
