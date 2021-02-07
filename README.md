@@ -24,3 +24,5 @@ Password:Support49!
 Guest Account:
 Username:guest@vidly.com
 Password:Support49!
+
+http://197.242.151.150/Vidly
