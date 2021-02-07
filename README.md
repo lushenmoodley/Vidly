@@ -17,6 +17,8 @@ This is asp.net mvc application which consist of the following:
 
 - Using Entity Framework code-first workflow to build models 
 
+Hosting Url:http://197.242.151.150/Vidly
+
 Admin Account:
 Username:admin@vidly.com
 Password:Support49!
@@ -25,4 +27,4 @@ Guest Account:
 Username:guest@vidly.com
 Password:Support49!
 
-http://197.242.151.150/Vidly
+
