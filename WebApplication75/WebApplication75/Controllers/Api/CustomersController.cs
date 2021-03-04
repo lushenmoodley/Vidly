@@ -21,7 +21,7 @@ namespace WebApplication75.Controllers
         }
 
         //Get/api/Customers--this is a convention build into asp.net web api
-     /*   public IEnumerable<CustomerDTO> GetCustomers()//return a list of customers
+        public IEnumerable<CustomerDTO> GetCustomers()//return a list of customers
         {
             return _context.Customers.ToList().Select(Mapper.Map<Customer,CustomerDTO>);
         }
@@ -81,7 +81,7 @@ namespace WebApplication75.Controllers
 
             _context.SaveChanges();
         }
-        */
+        
         //Delete /api/Customers/1
         [HttpDelete]
         public void DeleteCustomer(int id)

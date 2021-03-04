@@ -947,3 +947,4 @@ C:\Users\lushe\OneDrive\Desktop\Vidly\WebApplication75\WebApplication75\obj\Debu
 C:\Users\lushe\OneDrive\Desktop\Vidly\WebApplication75\WebApplication75\obj\Debug\WebApplication75.csproj.CopyComplete
 C:\Users\lushe\OneDrive\Desktop\Vidly\WebApplication75\WebApplication75\obj\Debug\WebApplication75.dll
 C:\Users\lushe\OneDrive\Desktop\Vidly\WebApplication75\WebApplication75\obj\Debug\WebApplication75.pdb
+C:\Users\lushe\OneDrive\Desktop\Vidly\WebApplication75\WebApplication75\obj\Debug\WebApplication75.Migrations.rentalClassAdded.resources
